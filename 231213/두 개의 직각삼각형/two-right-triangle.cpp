@@ -6,7 +6,7 @@ int main() {
     cnt = n;
     //별 ... 8 6 4 2
     //공백 0 2 4 6 ...
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < 2 * (n - i); j++) {
             if (j == cnt) {
                 for (int k = 0; k < 2 * i; k++) {
