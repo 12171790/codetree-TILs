@@ -1,34 +1,23 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int n, cnt = 0;
+    int n;
     cin >> n;
 
-    for (int i = 0; i < n; i++) {
-        if (i == 1) {
-            cout << "*";
-        }
-        else {
-            for (int j = 0; j < n - cnt; j++) {
+    for (int i = 0; i < 2 * n; i++) {
+        if (i % 2 == 0) {
+            for (int j = 0; j < n - i / 2; j++) {
                 cout << "* ";
             }
-            cnt++;
+        }
+        else {
+            for (int j = 0; j < i / 2 + 1; j++) {
+                cout << "* ";
+            }
         }
         cout << endl;
     }
-    cnt--;
-    for (int i = n - 1; i >= 0; i--) {
-        if (i == 1) {
-            cout << "*";
-        }
-        else {
-            for (int j = 0; j < n - cnt; j++) {
-                cout << "* ";
-            }
-            cnt--;
-        }
-        cout << endl;
-    }
+
     // 여기에 코드를 작성해주세요.
     return 0;
 }
