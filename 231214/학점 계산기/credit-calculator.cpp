@@ -14,8 +14,8 @@ int main() {
     cout << fixed;
     cout.precision(1);
     cout << avg << endl;;
-    if (avg > 4) cout << "Perfect";
-    else if (avg > 3) cout << "Good";
+    if (avg >= 4) cout << "Perfect";
+    else if (avg >= 3) cout << "Good";
     else cout << "Poor";
     // 여기에 코드를 작성해주세요.
     return 0;
