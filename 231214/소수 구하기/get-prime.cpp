@@ -10,13 +10,13 @@ int main() {
     //초기화
     for (int i = 2; i < n + 1; i++) arr[i] = true;
 
-    for (int i = 2; i < sqrt(n); i++) {
+    for (int i = 2; i <= sqrt(n); i++) {
         if (arr[i]) {
-            for (int j = i + i; j < n; j += i) arr[j] = false;
+            for (int j = i + i; j <= n; j += i) arr[j] = false;
         }
     }
 
-    for (int i = 2; i < n; i++) {
+    for (int i = 2; i <= n; i++) {
         if (arr[i]) cout << i << " ";
     }
 
