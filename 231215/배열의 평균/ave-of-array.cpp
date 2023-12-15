@@ -13,7 +13,7 @@ int main() {
             widthSum += arr[i][j];
         }
         totalSum += widthSum;
-        widthAvg = widthSum / 4;
+        widthAvg = widthSum / 4.0;
         widthSum = 0;
         cout << widthAvg << " ";
     }
@@ -23,12 +23,12 @@ int main() {
         for (int i = 0; i < 2; i++) {
             heightSum += arr[i][j];  
         }
-        heightAvg = heightSum / 2;
+        heightAvg = heightSum / 2.0;
         heightSum = 0;
         cout << heightAvg << " ";
     }
     cout << endl;
-    totalAvg = totalSum / 8;
+    totalAvg = totalSum / 8.0;
     cout << totalAvg << endl;
     // 여기에 코드를 작성해주세요.
     return 0;
