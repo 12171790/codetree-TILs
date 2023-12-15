@@ -12,7 +12,7 @@ int main() {
     A_arr = (int**)malloc(sizeof(int*) * n);
     B_arr = (int**)malloc(sizeof(int*) * n);
     resultArr = (int**)malloc(sizeof(int*) * n);
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < n; i++) {
         A_arr[i] = (int*)malloc(sizeof(int) * m);
         B_arr[i] = (int*)malloc(sizeof(int) * m);
         resultArr[i] = (int*)malloc(sizeof(int) * m);
@@ -42,13 +42,13 @@ int main() {
         cout << endl;
     }
 
-    for (int i = 0; i < n; i++) {
-        free(A_arr[i]);
-        free(B_arr[i]);
-        free(resultArr[i]);
-    }
+    // for (int i = 0; i < n; i++) {
+    //     free(A_arr[i]);
+    //     free(B_arr[i]);
+    //     free(resultArr[i]);
+    // }
 
-    free(A_arr);
-    free(B_arr);
-    free(resultArr);
+    // free(A_arr);
+    // free(B_arr);
+    // free(resultArr);
 }
