@@ -20,16 +20,17 @@ int main() {
     }
 
     //i는 A_arr의 시작점
-    for (int i = 0; i < n1 - n2; i++) {
+    for (int i = 0; i <= n1 - n2; i++) {
         //j는 B_arr의 시작점. A_arr 시작점 i + j
         for (int j = 0; j < n2; j++) {
             if(A_arr[i + j] == B_arr[j]) {
                 cnt++;
-                continue;
             }
-            break;
+            else {
+                cnt = 0;
+                break;
+            }
         }
-        if (cnt == n2) break;
     }
     if (cnt == n2) cout << "Yes";
     else cout << "No";
