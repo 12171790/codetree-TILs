@@ -9,9 +9,9 @@ int main() {
     int** resultArr;
 
     cin >> n >> m;
-    A_arr = (int**)malloc(sizeof(int) * n);
-    B_arr = (int**)malloc(sizeof(int) * n);
-    resultArr = (int**)malloc(sizeof(int) * n);
+    A_arr = (int**)malloc(sizeof(int*) * n);
+    B_arr = (int**)malloc(sizeof(int*) * n);
+    resultArr = (int**)malloc(sizeof(int*) * n);
     for (int i = 0; i < m; i++) {
         A_arr[i] = (int*)malloc(sizeof(int) * m);
         B_arr[i] = (int*)malloc(sizeof(int) * m);
