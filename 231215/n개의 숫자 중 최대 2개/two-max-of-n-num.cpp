@@ -9,7 +9,7 @@ bool desc(int a, int b)
 
 using namespace std;
 int main() {
-    int n;
+    int n, max, max_;
     int* arr;
 
     cin >> n;
@@ -19,9 +19,21 @@ int main() {
         cin >> arr[i];
     }
     
-    sort(arr, arr + n, desc);
+    // sort(arr, arr + n, desc);
 
-    cout << arr[0] << " " << arr[1];
-    // 여기에 코드를 작성해주세요.
+    max = arr[0];
+    max_ = arr[1];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max_ = max;
+            max = arr[i];
+        }
+        else if (arr[i] > max_) {
+            max_ = arr[i];
+        }
+
+    }
+
+    cout << max << " " << max_;
     return 0;
 }
