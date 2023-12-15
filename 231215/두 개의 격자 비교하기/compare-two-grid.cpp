@@ -42,13 +42,13 @@ int main() {
         cout << endl;
     }
 
-    // for (int i = 0; i < n; i++) {
-    //     free(A_arr[i]);
-    //     free(B_arr[i]);
-    //     free(resultArr[i]);
-    // }
+    for (int i = 0; i < n; i++) {
+        free(A_arr[i]);
+        free(B_arr[i]);
+        free(resultArr[i]);
+    }
 
-    // free(A_arr);
-    // free(B_arr);
-    // free(resultArr);
+    free(A_arr);
+    free(B_arr);
+    free(resultArr);
 }
