@@ -31,6 +31,7 @@ int main() {
                 break;
             }
         }
+        if (cnt == n2) break;
     }
     if (cnt == n2) cout << "Yes";
     else cout << "No";
