@@ -23,7 +23,7 @@ int main() {
     max = arr[0];
     cout << idx + 1 << " ";
 
-    while(idxSub != 0) {
+    while(idx != 0) {
         for (int i = 0; i < idx; i++) {
             if (arr[i] > max) {
                 max = arr[i];
