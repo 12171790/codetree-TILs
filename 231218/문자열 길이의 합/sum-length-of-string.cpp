@@ -10,11 +10,7 @@ int main() {
     
     for (int i = 0; i < n; i++) {
         cin >> strArr[i];
-        for (int j = 0; j < strArr[i].length(); j++) {
-            if (strArr[i][j] == 'a') {
-                cnt++;
-                break;
-            }
+        if (strArr[i][0] == 'a') cnt++;
         }
         sum += strArr[i].length();
     }
