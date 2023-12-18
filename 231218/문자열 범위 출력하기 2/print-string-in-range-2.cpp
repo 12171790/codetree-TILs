@@ -7,8 +7,9 @@ int main() {
     int n;
     cin >> str;
     cin >> n;
-    for (int i = str.length() - 1; i >= str.length() - n; i--) {
-        cout << str[i];
+    for (int i = 0; i < n; i++) {
+        if (str.length() - 1 - i >= 0) cout << str[str.length() - 1 - i];
+
     }
     // 여기에 코드를 작성해주세요.
     return 0;
