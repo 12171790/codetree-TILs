@@ -11,7 +11,6 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> strArr[i];
         if (strArr[i][0] == 'a') cnt++;
-        }
         sum += strArr[i].length();
     }
 
