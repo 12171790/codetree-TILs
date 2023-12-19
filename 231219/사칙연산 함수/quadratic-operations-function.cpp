@@ -24,7 +24,7 @@ int main() {
         case '-': result = sub(num1, num2); break;
         case '/': result = divi(num1, num2); break;
         case '*': result = mul(num1, num2); break;
-        default: cout << false; return 0;
+        default: cout << "False"; return 0;
     }
     cout << num1 << " " << oper << " " << num2 << " = " << result << endl;
     // 여기에 코드를 작성해주세요.
