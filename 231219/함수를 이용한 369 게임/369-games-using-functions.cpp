@@ -1,8 +1,13 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 bool IsTSN(int n) {
-    return (n % 10) == 3 || (n % 10) == 6 || (n % 10) == 9 || (n / 10) == 3 || (n / 10) == 6 || (n / 10) == 9;
+    string str1 = to_string(n);
+    for (int i = 0; i < str1.length(); i++) {
+        if (str1[i] == '3' || str1[i] == '6' || str1[i] == '9') return true;
+    }
+    return false;
 }
 
 bool IsMagicNumber(int n) {
