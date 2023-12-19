@@ -30,7 +30,7 @@ bool isExist(int y, int m, int d){
     }
     else if (m == 2 || m == 4 || m == 6 || m == 9 || m == 11) {
         if (m == 2) {
-            if(isLeapYear) {
+            if(isLeapYear(y)) {
                 if (d <= 29) return true;
             }
             else {
