@@ -26,6 +26,7 @@ int main() {
         cin >> e;
         v.emplace_back(e);
     }
-    cout << Find(v, v.size() - 1);
+    if (n <= 1) cout << v[0];
+    else cout << Find(v, v.size() - 1);
     return 0;
 }
