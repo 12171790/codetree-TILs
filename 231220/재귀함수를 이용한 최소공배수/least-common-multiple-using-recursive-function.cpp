@@ -2,35 +2,18 @@
 #include <vector>
 using namespace std;
 
-int Find(vector<int>& v, int n, int num) {
-    if (n == v.size()) {
-        int a = v[0];
-        int b = num;
-        int cntA = 1, cntB = 1;
-        while (a != b) {
-            if (a > b) {
-                b = num * cntB++;
-            }
-            else {
-                a = v[v.size() - n] * cntA++;
-            }
-        }
-        return a;
-    }
-    else {
-        int a = v[v.size() - n];
-        int b = num;
-        int cntA = 1, cntB = 1;
-        while (a != b) {
-            if (a > b) {
-                b = num * cntB++;
-            }
-            else {
-                a = v[v.size() - n] * cntA++;
-            }
-        }
-        return Find(v, ++n, a);
-    }
+int gcd(int a, int b) {
+
+    if (b == 0) return a;
+    
+    return gcd(b, a % b);
+}
+
+int Find(vector<int>& v, int n) {
+
+    if (n == 1) return (v[1] * v[0]) / gcd(v[1], v[0]);
+
+    return (v[n] * Find(v, n - 1)) / gcd(v[n], Find(v, n - 1));
 }
 
 int main() {
@@ -43,8 +26,6 @@ int main() {
         cin >> e;
         v.emplace_back(e);
     }
-
-    cout << Find(v, 2, v[v.size() - 1]);
-    
+    cout << Find(v, v.size() - 1);
     return 0;
 }
