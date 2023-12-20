@@ -12,6 +12,7 @@ int SearchPartString(string str, string tarStr) {
         if (cnt == tarStr.length()) return i;
         else cnt = 0;
     }
+    return -1;
 }
 
 int main() {
