@@ -12,6 +12,11 @@ int main() {
 	int a, b, c;
 	cin >> a >> b >> c;
 
-	cout << Minute(a, b, c) - Minute(11, 11, 11) << endl;
+	if (Minute(a, b, c) - Minute(11, 11, 11) < 0) {
+		cout << -1 << endl;
+	}
+	else {
+		cout << Minute(a, b, c) - Minute(11, 11, 11) << endl;
+	}
 	return 0;
 }
