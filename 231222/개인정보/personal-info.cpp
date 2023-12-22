@@ -24,7 +24,10 @@ public :
 	double GetWeight() { return this->weight; }
 	string GetName() { return this->name; }
 
-	void Display() { cout << GetName() << " " << GetHeight() << " " << GetWeight() << endl; }
+	void Display() { 
+		cout << GetName() << " " << GetHeight() << " "; 
+		printf("%.1f\n", GetWeight());
+	}
 };
 
 bool CmpByName(Student& a, Student& b) {
