@@ -25,6 +25,9 @@ public:
 };
 
 bool Cmp(Pair& a, Pair& b) {
+	if (a.GetValue() == b.GetValue()) {
+		return a.GetNum() < b.GetNum();
+	}
 	return a.GetValue() < b.GetValue();
 }
 
