@@ -17,11 +17,13 @@ public:
 
 	void SetX(int x) { this->x = x; }
 	void SetY(int y) { this->y = y; }
+    void setNum(int num) { this->num = num; }
 
 	int GetX() { return this->x; }
 	int GetY() { return this->y; }
+    int GetNum() { return this->num; }
 
-	void Display() { cout << this->num << endl; }
+	void Display() { cout << GetNum() << endl; }
 };
 
 int Distance(Dot& a) {
@@ -29,6 +31,9 @@ int Distance(Dot& a) {
 }
 
 bool Cmp(Dot& a, Dot& b) {
+	if (Distance(a) == Distance(b)) {
+		return a.GetNum() < b.GetNum();
+	}
 	return Distance(a) < Distance(b);
 }
 
