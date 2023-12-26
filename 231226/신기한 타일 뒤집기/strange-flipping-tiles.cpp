@@ -4,7 +4,6 @@ using namespace std;
 
 int Stack(vector<int>& v, int& move, char& dir, int& prev) {
 
-	
 	//-1 검은색, 1 흰색
 	if (dir == 'R') { //검은색
 		for (int i = prev; i < prev + move; i++) {
