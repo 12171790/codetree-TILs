@@ -26,7 +26,7 @@ int main() {
 		cin >> x1 >> y1;
 		cin >> x2 >> y2;
 		if (i == 2) RectM = true;
-		Width(v, x1, y1, x2, y2, RectM);
+		Width(v, x1 + OFFSET, y1 + OFFSET, x2 + OFFSET, y2 + OFFSET, RectM);
 	}
 
 	for (int i = 0; i < v.size(); i++) {
