@@ -11,7 +11,7 @@ int Stack(vector<int>& v, int& move, char& dir, int& prev) {
 		return prev + move;
 	}
 	else if (dir == 'L') {
-		for (int i = prev; i > prev - move; i--) {
+		for (int i = prev - 1; i >= prev - move; i--) {
 			v[i]++;
 		}
 		return prev - move;
@@ -29,9 +29,10 @@ int main() {
 		cin >> move >> dir;
 		prev = Stack(v, move, dir, prev);
 	}
-
 	for (int i = 0; i < v.size(); i++) {
-		if (v[i] >= 2) cnt++;
+		if (v[i] >= 2) {
+			cnt++;
+		}
 	}
 	
 	cout << cnt << endl;
