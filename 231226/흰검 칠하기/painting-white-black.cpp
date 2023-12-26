@@ -18,10 +18,10 @@ int Stack(vector<vector<int>>& v, int& move, char& dir, int& prev) {
 				v[i][0] = -1;
 			}
 		}
-		return prev + move;
+		return prev + move - 1;
 	}
 	else if (dir == 'L') { //흰색
-		for (int i = prev - 1; i >= prev - move; i--) {
+		for (int i = prev; i > prev - move; i--) {
 
 			v[i][2]++;
 
@@ -32,7 +32,7 @@ int Stack(vector<vector<int>>& v, int& move, char& dir, int& prev) {
 				v[i][0] = 1;
 			}
 		}
-		return prev - move;
+		return prev - move + 1;
 	}
 
 }
