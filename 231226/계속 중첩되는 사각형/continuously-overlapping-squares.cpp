@@ -27,6 +27,7 @@ int main() {
 		cin >> x1 >> y1;
 		cin >> x2 >> y2;
 		if (i % 2 == 1) isBlue = true;
+		else isBlue = false;
 		Width(v, x1 + OFFSET, y1 + OFFSET, x2 + OFFSET, y2 + OFFSET, isBlue);
 	}
 
