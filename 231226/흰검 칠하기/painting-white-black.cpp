@@ -38,8 +38,8 @@ int Stack(vector<vector<int>>& v, int& move, char& dir, int& prev) {
 }
 
 int main() {
-	vector<vector<int>> v(2000, vector<int>(3, 0));
-	int n, move = 0, prev = 1000;
+	vector<vector<int>> v(200000, vector<int>(3, 0));
+	int n, move = 0, prev = 100000;
 	int white = 0, black = 0, gray = 0;
 	char dir = 0;
 
