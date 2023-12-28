@@ -3,9 +3,7 @@
 #include <vector>
 using namespace std;
 
-bool inRange(int r, int c, int n, int m) {
-	return (r >= 0 && r < n && c >= 0 && c < m);
-}
+int ORDER_LENGTH = 100000;
 
 int main() {
 	char order; // 명령 L, R, F
@@ -18,7 +16,7 @@ int main() {
 	bool returnToPoint = false;
 
 
-	while (true) {
+	while (ORDER_LENGTH) {
 		cin >> order;
 
 		if (order == 'L') {
@@ -32,7 +30,7 @@ int main() {
 			ny += dy[dirNum];
 		}
 		cntSecond++;
-
+		ORDER_LENGTH--;
 		if (nx == 0 && ny == 0) {
 			returnToPoint = true;
 			break;
