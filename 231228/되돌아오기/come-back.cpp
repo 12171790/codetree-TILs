@@ -3,6 +3,10 @@
 #include <vector>
 using namespace std;
 
+bool inRange(int r, int c, int n, int m) {
+	return (r >= 0 && r < n && c >= 0 && c < m);
+}
+
 int main() {
 	int n;
 	int x;
@@ -43,6 +47,6 @@ int main() {
 			}
 		}
 	}
-
+	cout << -1;
 	return 0;
 }
