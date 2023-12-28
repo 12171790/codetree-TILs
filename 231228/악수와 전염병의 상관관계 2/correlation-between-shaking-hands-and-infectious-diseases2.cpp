@@ -65,9 +65,12 @@ int main() {
 				if ((info[i][1] == developerVec[j].GetNumber() 
 					|| info[i][2] == developerVec[j].GetNumber())
 					&& developerVec[j].GetInfectCnt() < K) {
+
+					// 해당 개발자가 감염 되어있는 경우에만 감염 전파 횟수 증가
+					if (developerVec[info[i][1] - 1].GetInfect()) developerVec[info[i][1] - 1].IncreaseInfectCnt();
+					if (developerVec[info[i][2] - 1].GetInfect()) developerVec[info[i][2] - 1].IncreaseInfectCnt();
 					developerVec[info[i][1] - 1].SetInfect(true);
 					developerVec[info[i][2] - 1].SetInfect(true);
-					developerVec[j].IncreaseInfectCnt();
 					break;
 				}
 			}
