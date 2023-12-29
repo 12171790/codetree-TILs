@@ -29,7 +29,7 @@ int main() {
 			if (InRange(r + dr[j], c + dc[j], N) && v[r + dr[j]][c + dc[j]] == 1) cnt++;
 		}
 
-		if (cnt >= 3) cout << 1 << endl;
+		if (cnt == 3) cout << 1 << endl;
 		else cout << 0 << endl;
 
 		cnt = 0;
