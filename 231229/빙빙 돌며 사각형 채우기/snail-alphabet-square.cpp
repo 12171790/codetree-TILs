@@ -15,15 +15,16 @@ bool InRange(int r, int c) {
 
 void FillVector(vector<vector<char>>& v) {
 	//65~90
-	char cnt = 0;
+	int cnt = 0;
 	int nr = 0, nc = 0;
 	int dirNum = 0;
 
 	while (v.size() * v[0].size() > cnt) {
 
+		//cout << "숫자cnt : " << (int)cnt << endl;
 		//cout << "문자cnt : " << (cnt % 26) + 65 << endl;
 		if (InRange(nr, nc) && v[nr][nc] == 0) {
-			v[nr][nc] = (cnt % 26) + 65;
+			v[nr][nc] = (char)((cnt % 26) + 65);
 			cnt++;
 		}
 		else {
