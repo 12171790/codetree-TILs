@@ -43,7 +43,7 @@ int main() {
 						case 0:
 							cout << nr + 1 << " " << nc - 2 << endl; break;
 						case 1:
-							cout << nr - 1 << " " << nc - 1 << endl; break;
+							cout << nr - 2 << " " << nc - 2 << endl; break;
 						case 2:
 							cout << nr - 2 << " " << nc + 1 << endl; break;
 						}
@@ -66,7 +66,7 @@ int main() {
 						case 0:
 							cout << nr + 1 << " " << nc - 2 << endl; break;
 						case 1:
-							cout << nr - 1 << " " << nc - 1 << endl; break;
+							cout << nr - 2 << " " << nc - 2 << endl; break;
 						case 2:
 							cout << nr - 2 << " " << nc + 1 << endl; break;
 						}
