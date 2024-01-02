@@ -38,7 +38,7 @@ int main() {
 						nr += dr[dirNum], nc += dc[dirNum];
 					}
 					if (cnt == 4) {
-						cout << 2 << endl;
+						cout << 1 << endl;
 						cout << nr + 1 - 2 * dr[dirNum] << " " << nc + 1 - 2 * dc[dirNum] << endl;
 						return 0;
 					}
