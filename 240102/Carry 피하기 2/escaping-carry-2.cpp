@@ -52,7 +52,8 @@ int main() {
 		}
 	}
 
-	cout << maxSum;
+	if (maxSum != INT_MIN) cout << maxSum;
+	else cout << -1;
 
 	return 0;
 }
