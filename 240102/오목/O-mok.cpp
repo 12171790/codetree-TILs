@@ -27,8 +27,8 @@ int main() {
 		}
 	}
 
-	for (int i = 0; i < v.size() - 4; i++) {
-		for (int j = 0; j < v[0].size() - 4; j++) {
+	for (int i = 0; i < v.size(); i++) {
+		for (int j = 0; j < v[0].size(); j++) {
 			if (v[i][j] == 1) {
 				for (int k = 0; k < 8; k++) {
 					dirNum = k;
