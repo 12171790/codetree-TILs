@@ -33,7 +33,7 @@ int main() {
 				for (int k = 0; k < 8; k++) {
 					dirNum = k;
 					nr = i, nc = j;
-					while (inRange(nr, nc) && v[nr + dr[dirNum]][nc + dc[dirNum]] == 1) {
+					while (inRange(nr + dr[dirNum], nc + dc[dirNum]) && v[nr + dr[dirNum]][nc + dc[dirNum]] == 1) {
 						cnt++;
 						nr += dr[dirNum], nc += dc[dirNum];
 					}
@@ -49,7 +49,7 @@ int main() {
 				for (int k = 0; k < 8; k++) {
 					dirNum = k;
 					nr = i, nc = j;
-					while (inRange(nr, nc) && v[nr + dr[dirNum]][nc + dc[dirNum]] == 2) {
+					while (inRange(nr + dr[dirNum], nc + dc[dirNum]) && v[nr + dr[dirNum]][nc + dc[dirNum]] == 2) {
 						cnt++;
 						nr += dr[dirNum], nc += dc[dirNum];
 					}
