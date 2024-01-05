@@ -35,22 +35,21 @@ int main() {
 
 			for (int k = 0; k < B.size(); k++) {
 				if (A[i + j] == B[k]) {
-					v[k]++;
-					cnt++;
+					if (v[k] == 1) continue;
+					else {
+						v[k] = 1;
+						cnt++;
+						break;
+					}
 				}
 			}
 
 		}
 
 		if (cnt == B.size()) {
-
-			for (int j = 0; j < B.size(); j++) {
-				if (v[j] > 1) dup = true;
-			}
-			
-			if (!dup) cntAnswer++;
+			cntAnswer++;
 		}
-		dup = false;
+
 		cnt = 0;
 	}
 
