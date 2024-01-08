@@ -31,24 +31,24 @@ int main() {
 				cntArr1[i]++;
 			}
 		}
-        index = 0;
+		index = 0;
 	}
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 1; j <= N; j++) {
-            if (abs(abc2[i] - j) <= 2 || abs(abc2[i] - j) >= (N - 2)) {
+	for (int i = 0; i < 3; i++) {
+		for (int j = 1; j <= N; j++) {
+			if (abs(abc2[i] - j) <= 2 || abs(abc2[i] - j) >= (N - 2)) {
 				keyNumber2[i][index++] = j;
 				cntArr2[i]++;
 			}
-        }
-        index = 0;
-    }
+		}
+		index = 0;
+	}
 
 
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 5; j++) {
 			for (int k = 0; k < 5; k++) {
-				if (keyNumber1[i][j] == keyNumber2[i][k] && keyNumber1[i][j != 0]) dupCnt[i]++;
+				if (keyNumber1[i][j] == keyNumber2[i][k] && keyNumber1[i][j] != 0) dupCnt[i]++;
 			}
 		}
 	}
@@ -56,8 +56,21 @@ int main() {
 	int totalCount1 = cntArr1[0] * cntArr1[1] * cntArr1[2];
 	int totalCount2 = cntArr2[0] * cntArr2[1] * cntArr2[2];
 	int dupCount = dupCnt[0] * dupCnt[1] * dupCnt[2];
-	
+
 	cout << totalCount1 + totalCount2 - dupCount << endl;
 
 	return 0;
 }
+
+/*
+* 1 
+* 1 2 3 4
+* 2
+* 1 2 3 4
+* 3
+* 1 2 3 4
+* 
+* 1 2 3 4
+* 1 2 3 4
+* 1 2 3 4
+*/
