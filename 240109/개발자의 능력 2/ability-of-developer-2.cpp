@@ -7,20 +7,38 @@
 #include <cmath>
 using namespace std;
 
+int arr[6];
+
+int getSub(int i, int j, int k, int l) {
+	int totalSum = 0;
+	int minSum = 0;
+	int maxSum = 0;
+	for (int i = 0; i < 6; i++) totalSum += arr[i];
+
+	int sumFirstGroup = arr[i] + arr[j];
+	int sumSecondGroup = arr[k] + arr[l];
+	int sumThirdGroup = totalSum - (sumFirstGroup + sumSecondGroup);
+
+	minSum = min(sumFirstGroup, min(sumSecondGroup, sumThirdGroup));
+	maxSum = max(sumFirstGroup, max(sumSecondGroup, sumThirdGroup));
+	
+	return maxSum - minSum;
+}
+
 int main() {
 	int minSub = INT_MAX;
-	int arr[6];
 	int cnt = 0;
 	for (int i = 0; i < 6; i++) cin >> arr[i];
 
-	sort(arr, arr + 6);
-
-	int sumFirstGroup = arr[0] + arr[5];
-	int sumSecondGroup = arr[1] + arr[4];
-	int sumThirdGroup = arr[2] + arr[3];
-	int minSum = min(sumFirstGroup, min(sumSecondGroup, sumThirdGroup));
-	int maxSum = max(sumFirstGroup, max(sumSecondGroup, sumThirdGroup));
-
-
-	cout << maxSum - minSum << endl;
+	for (int i = 0; i < 6; i++) {
+		for (int j = i + 1; j < 6; j++) {
+			for (int k = 0; k < 6; k++) {
+				for (int l = k + 1; l < 6; l++) {
+					if (k == i || k == j || l == j || l == i) continue;
+					minSub = min(minSub, getSub(i, j, k, l));
+				}
+			}
+		}
+	}
+	cout << minSub << endl;
 }
