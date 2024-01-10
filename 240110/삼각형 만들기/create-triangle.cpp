@@ -18,12 +18,13 @@ bool isParallelTri(vector<vector<int>>& v, int i, int j, int k) {
 
 int getWidth(vector<vector<int>>& v, int i, int j, int k) {
 	return ((v[i][0] * v[j][1] + v[j][0] * v[k][1] + v[k][0] * v[i][1]) -
-		(v[j][0] * v[i][1] + v[k][0] * v[j][1] + v[i][0] * v[k][1])) / 2;
+		(v[j][0] * v[i][1] + v[k][0] * v[j][1] + v[i][0] * v[k][1]));
 }
 
 int main() {
 	int N, x, y;
 	int maxWidth = INT_MIN;
+	bool isThereParallelTri = false;
 	int width = 0;
 	cin >> N;
 	vector<vector<int>> v(N, vector<int>(2, 0));
@@ -38,16 +39,16 @@ int main() {
 		for (int j = i + 1; j < N; j++) {
 			for (int k = j + 1; k < N; k++) {
 				if (isParallelTri(v, i, j, k)) {
+					isThereParallelTri = true;
 					width = getWidth(v, i, j, k);
 					maxWidth = max(maxWidth, width);
 				}
 			}
 		}
 	}
-	cout << maxWidth * 2;
 
-	// (2, 2), (2, 4), (4, 3)
-	//
+	if (isThereParallelTri)	cout << maxWidth;
+	else cout << 0;
 
 	return 0;
 }
