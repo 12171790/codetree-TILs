@@ -26,23 +26,19 @@ int main() {
 
 	for (int i = 0; i < N; i++) {
 		int arr[MAX_NUM] = { 0 };
-		int minNum = INT_MAX;
 		int cnt = 0;
 		for (int j = 0; j < N; j++) {
 			if (i == j) continue;
 
-			for (int k = v[j][0]; k < v[i][1]; k++) {
+			for (int k = v[j][0]; k < v[j][1]; k++) {
 				arr[k]++;
 			}
 
-			minNum = min(minNum, v[j][0]);
 		}
 
-		for (int j = minNum; j < MAX_NUM; j++) {
-			if (arr[j] == 0) break;
-			cnt++;
+		for (int j = 1; j < MAX_NUM; j++) {
+			if (arr[j] >= 1) cnt++;
 		}
-
 		maxTime = max(maxTime, cnt);
 	}
 
