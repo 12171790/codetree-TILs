@@ -17,8 +17,8 @@ bool isParallelTri(vector<vector<int>>& v, int i, int j, int k) {
 }
 
 int getWidth(vector<vector<int>>& v, int i, int j, int k) {
-	return ((v[i][0] * v[j][1] + v[j][0] * v[k][1] + v[k][0] * v[i][1]) -
-		(v[j][0] * v[i][1] + v[k][0] * v[j][1] + v[i][0] * v[k][1]));
+	return abs(((v[i][0] * v[j][1] + v[j][0] * v[k][1] + v[k][0] * v[i][1]) -
+		(v[j][0] * v[i][1] + v[k][0] * v[j][1] + v[i][0] * v[k][1])));
 }
 
 int main() {
