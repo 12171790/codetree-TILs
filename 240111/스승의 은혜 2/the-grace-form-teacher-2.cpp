@@ -31,7 +31,7 @@ int main() {
 			if (i == j) totalPrice += (v[j] / 2);
 			else totalPrice += v[j];
 
-			if (totalPrice >= B) break;
+			if (totalPrice > B) break;
 			else cnt++;
 			
 		}
@@ -43,3 +43,7 @@ int main() {
 	cout << maxCnt;
 	return 0;
 }
+
+
+// 2 2 4 6 8 20
+// 2 2 4 6 8 10
