@@ -13,7 +13,7 @@ using namespace std;
 int main() {
 	int N, B;
 	int price;
-	int j = 0;
+	int cnt = 0;
 	int totalPrice = 0;
 	int maxCnt = INT_MIN;
 	cin >> N >> B;
@@ -24,19 +24,22 @@ int main() {
 		v.emplace_back(price);
 	}
 
+	sort(v.begin(), v.end());
+
 	for (int i = 0; i < N; i++) {
-		for (j = 0; j < N; j++) {
-			if(totalPrice >= B) break;
-			
-			if (i == j) totalPrice += (v[i] / 2);
-			else totalPrice += v[i];
+		for (int j = 0; j < N; j++) {
+			if (i == j) totalPrice += (v[j] / 2);
+			else totalPrice += v[j];
+
+			if (totalPrice >= B) break;
+			else cnt++;
 			
 		}
-		maxCnt = max(maxCnt, j - 1);
+		maxCnt = max(maxCnt, cnt);
 		totalPrice = 0;
+		cnt = 0;
 	}
 
 	cout << maxCnt;
-
 	return 0;
 }
