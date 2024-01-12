@@ -33,8 +33,10 @@ int main() {
 		for (int j = 0; j < D; j++) {
 			if (sArr[i][0] == dArr[j][0]) { // 아픈 사람이 몇번째 치즈를 먹었는지 확인
 				if (sArr[i][1] > dArr[j][2]) { // 해당 치즈를 아프기 전에 먹었는지 확인
+					if (cheeseArr[dArr[j][1]] == i + 1) // 해당 치즈에 대해 이미 기록을 했다면 이번 D문에 대해서는 더 이상 기록하지 않음
+						continue;
+					
 					cheeseArr[dArr[j][1]]++; // 해당 치즈는 상한 치즈 후보
-					break; // 상한 치즈인지 확인하면 해당 S문에 대해 더 이상 검사하지 않음
 				}
 			}
 		}
