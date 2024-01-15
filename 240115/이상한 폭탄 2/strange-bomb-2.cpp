@@ -11,7 +11,7 @@ using namespace std;
 int main() {
 	int N, K; // 폭탄 N개, 특정 거리 K
 	int e;
-	int max_num = INT_MIN;
+	int max_num = -1;
 	vector<int> v;
 	cin >> N >> K;
 
