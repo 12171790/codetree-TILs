@@ -8,6 +8,15 @@
 
 using namespace std;
 
+bool cmp(pair<int, int>& v1, pair<int, int>& v2) {
+	if (v1.first + v1.second == v2.first + v2.second) {
+		return v1.first > v2.first;
+	}
+	else {
+		return v1.first + v1.second < v2.first + v2.second;
+	}
+}
+
 int main() {
 	int N, B; // N명의 학생, B만큼의 예산
 	int p, s; // 선물 가격 p, 배송비 s
@@ -15,20 +24,20 @@ int main() {
 	int maxCnt = INT_MIN;
 	int totalPrice = 0; // 총 선물 가격
 	cin >> N >> B;
-	vector<vector<int>> v(N, vector<int>(2, 0));
+	vector<pair<int, int>> v;
 	for (int i = 0; i < N; i++) {
 		cin >> p >> s;
-		v[i][0] = p, v[i][1] = s;
+		v.emplace_back(make_pair(p, s));
 	}
 
-	sort(v.begin(), v.end());
+	sort(v.begin(), v.end(), cmp);
 
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			if (i == j) 
-				totalPrice += (v[j][0] / 2) + v[j][1];
+				totalPrice += (v[j].first / 2) + v[j].second;
 			else
-				totalPrice += v[j][0] + v[j][1];
+				totalPrice += v[j].first + v[j].second;
 
 			if (totalPrice > B) 
 				break; // 예산 초과
