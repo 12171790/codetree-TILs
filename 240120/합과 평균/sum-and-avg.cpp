@@ -6,7 +6,7 @@ int main() {
     cin >> a >> b;
 
     cout << a + b << " ";
-    cout << (a + b) / 2.0 << endl;
+    printf("%.1f" ,(a + b) / 2.0);
     // 여기에 코드를 작성해주세요.
     return 0;
 }
