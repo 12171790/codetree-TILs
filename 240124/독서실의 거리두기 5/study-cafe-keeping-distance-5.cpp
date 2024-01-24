@@ -18,15 +18,22 @@ int main() {
 
 	for (int i = 0; i < strSize; i++) {
 		if (str[i] == '1') continue;
-        int minDist = INT_MAX;
+		
+		str[i] = '1';
+		int minDist = INT_MAX; // 가장 가까운 두 사람 간의 거리
 		for (int j = 0; j < strSize; j++) {
-			if (str[j] == '1') {
-				dist = abs(i - j);
-				minDist = min(minDist, dist);
+			if (str[j] == '0') continue;
+
+			for (int k = j + 1; k < strSize; k++) {
+
+				if (str[k] == '1') {
+					dist = abs(k - j);
+					minDist = min(minDist, dist);
+				}
 			}
 		}
-
 		answer = max(answer, minDist);
+		str[i] = '0';
 	}
 
 	cout << answer;
