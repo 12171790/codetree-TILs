@@ -19,7 +19,7 @@ int main() {
 		v.emplace_back(make_pair(a, b));
 	}
 
-	for (int i = 1; i < v[0].second / 2; i++) {
+	for (int i = 1; i <= v[0].second / 2; i++) {
 		int temp = i;
 		bool sefy = true;
 		for (int j = 0; j < v.size(); j++) {
