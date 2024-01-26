@@ -19,12 +19,13 @@ int main() {
 		v.emplace_back(e);
 	}
 
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < N; i++) { //최솟값이 될 숫자
 		int cnt = 0; // 뽑을 수 있는 숫자 수
+		
 		for (int j = 0; j < N; j++) {
-			if (i == j) continue;
-
-			if (abs(v[i] - v[j]) <= K) cnt++;
+			if (v[j] >= v[i]) {
+				if (abs(v[i] - v[j]) <= K) cnt++;
+			}
 		}
 
 		maxCnt = max(maxCnt, cnt);
