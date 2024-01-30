@@ -37,7 +37,7 @@ int main() {
 		v.emplace_back(e);
 	}
 
-	for (int i = max(v[0], v[v.size() - 1]); i < 100; i++) { // i번째 수가 최대라고 가정
+	for (int i = max(v[0], v[v.size() - 1]); i <= 100; i++) { // i번째 수가 최대라고 가정
 		if (isPossible(v, i, k)) {
 			minAnswer = min(minAnswer, i);
 		}
