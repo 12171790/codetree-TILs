@@ -5,11 +5,9 @@ int main() {
     int n;
 
     cin >> n;
-
+    cout << n * n << endl;
     if (n < 5) {
         cout << "tiny" << endl;
-    } else {
-        cout << n * n << endl;
     }
     return 0;
 }
