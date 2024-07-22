@@ -12,7 +12,7 @@ int main() {
             if (j < i) {
                 cout << " ";
             } else {
-                printf("%c", (alp > 90 ? alp - (26 * ((alp - 65) / 26)) : alp));
+                printf("%c", alp > 90 ? alp = 65 : alp);
                 alp++;
             }
 
