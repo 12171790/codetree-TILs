@@ -10,7 +10,7 @@ int main() {
     cin >> a >> b;
 
     for (int i = 1; i < a.length(); i++) {
-        a = a.substr(1, a.length() - 1) + a.substr(0, 1);
+        a = a.substr(a.length() - 1, 1) + a.substr(0, a.length() - 1);
 
         if (a.compare(b) == 0) {
             cnt = i;
