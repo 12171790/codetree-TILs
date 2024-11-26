@@ -9,7 +9,11 @@ int main() {
     cin >> n >> m;
     cin >> str;
 
-    string::iterator it = str.end();
+    list<char> li;
+    for (auto ch : str) {
+        li.push_back(ch);
+    }
+    list<char>::iterator it = li.end();
 
     for (int i = 0; i < m; i++) {
         char order = 0;
@@ -17,30 +21,32 @@ int main() {
 
         if (order == 'L') {
 
-            if (it == str.begin()) continue;
+            if (it == li.begin()) continue;
             it--;
 
         } else if (order == 'R') {
 
-            if (it == str.end()) continue;
+            if (it == li.end()) continue;
             it++;
 
         } else if (order == 'D') {
 
-            if (it == str.end()) continue;
-            it = str.erase(it);
+            if (it == li.end()) continue;
+            it = li.erase(it);
 
         } else if (order == 'P') {
 
             char addChar = 0;
             cin >> addChar;
-            str.insert(it, addChar);
-            it++;
+            li.insert(it, addChar);
 
         }
     }
-
-    cout << str << endl;
+    
+    for (auto it = li.begin(); it != li.end(); it++) {
+        cout << *it;
+    }
+    cout << endl;
     
     return 0;
 }
