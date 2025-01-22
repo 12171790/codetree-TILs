@@ -1,2 +1,2 @@
 a = float(input())
-print(a)
+print(f"{a:.2f}")
