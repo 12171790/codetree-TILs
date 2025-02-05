@@ -1,3 +1,3 @@
 inp = input()
-inp = inp[0:2] + inp[3:-2] + inp[-1:]
+inp = inp[0:1] + inp[2:-2] + inp[-1:]
 print(inp)
