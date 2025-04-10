@@ -15,7 +15,7 @@ for _ in range(n):
 
             countWhite[i] += 1
             
-            if (countWhite[i] == 2 and countBlack[i] == 2):
+            if (countWhite[i] >= 2 and countBlack[i] >= 2):
                 arr[i] = 2
                 continue
 
@@ -29,7 +29,7 @@ for _ in range(n):
 
             countBlack[i] += 1
 
-            if (countWhite[i] == 2 and countBlack[i] == 2):
+            if (countWhite[i] >= 2 and countBlack[i] >= 2):
                 arr[i] = 2
                 continue
             
