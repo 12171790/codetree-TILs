@@ -14,5 +14,8 @@ for i in range(n):
     else:
         count += 1
 
+    if i == n - 1:
+        max_count = max(max_count, count)    
+
 print(max_count)
 
