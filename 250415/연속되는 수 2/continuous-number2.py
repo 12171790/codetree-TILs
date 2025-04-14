@@ -4,7 +4,7 @@ arr = []
 for _ in range(n):
     arr.append(int(input()))
 
-count = 0
+count = 1
 max_count = 0
 
 for i in range(n):
